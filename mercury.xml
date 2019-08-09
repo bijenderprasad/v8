@@ -1,10 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-  <test thread-count="5" name="Test">
-    <classes>
-      <class name="mercuryWelcomeTest.registerPageTest"/>
-      <class name="mercuryWelcomeTest.homePageTest"/>
-    </classes>
-  </test> <!-- Test -->
+<suite name="Suite"  thread-count="1">
+
+
+<!-- 	<test name = "RegisterPage" preserve-order="true">
+		<classes>
+			<class name ="mercuryTestClassess.registerPageTest"/>
+			<class name ="mercuryTestClassess.homePageTest"/>
+		</classes>
+	</test>
+ 
+ 
+	<test name = "homePageTest" preserve-order="true" >
+		<classes>
+			<class 
+			name ="mercuryTestClassess.homePageTest"/>
+		</classes>
+	</test> -->
+ <test name = "time" preserve-order="false">
+ 
+ <packages>
+ <package name ="mercuryTestClassess"/>
+ </packages>
+ </test>
+ 
 </suite> <!-- Suite -->
+
+
+

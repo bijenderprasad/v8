@@ -2,6 +2,7 @@ package mercuryTestClassess;
 import java.lang.reflect.Method;
 
 import org.openqa.selenium.By;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -59,7 +60,7 @@ public class registerPageTest {
 		
 	}
 
-	@Test (dependsOnMethods = "navigatetohomepage")
+	@Test (alwaysRun=true,dependsOnMethods = "navigatetohomepage")
 	public void navigateToRegisterPage() {
 		test.homePageActionClass.clickonRegisterbutton(register);
 		
@@ -95,16 +96,22 @@ public class registerPageTest {
 		test.registerPageActionClass.setupUserLoginData(username, "bijepras");
 		test.registerPageActionClass.setupUserLoginData(password, "26265547bp");
 		test.registerPageActionClass.setupUserLoginData(confirmPassword, "26265547bp");
-		test.registerPageActionClass.clickOnSubmitButton(submit);
+		//test.registerPageActionClass.clickOnSubmitButton(submit);
 	}
 	
-	@Test  (dependsOnMethods = "enterLogincredentials")
+	@Test  (dependsOnMethods = "enterLogincredentials" )
 	public void registerCOnfirmation() {
 		
 		test.registerPageActionClass.textDisplayedConfirmation(registerheading);
 		test.registerPageActionClass.Validateusername(ExpectedUserName, actualusername);
 	}
 
+	@AfterClass (alwaysRun=false)
+	
+	public void closeSession() {
+		//test.homePageActionClass.closeBrowserSession();
+	}
+	
 }
 
 

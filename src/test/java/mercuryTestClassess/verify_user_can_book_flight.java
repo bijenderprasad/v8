@@ -3,6 +3,7 @@ package mercuryTestClassess;
 import java.lang.reflect.Method;
 
 import org.openqa.selenium.By;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -45,7 +46,11 @@ public class verify_user_can_book_flight {
 		
 	}
 	
-	
+	@AfterClass
+	public void closeSession() {
+		test.homePageActionClass.closeBrowserSession();
+	}
+
 	
 	
 	

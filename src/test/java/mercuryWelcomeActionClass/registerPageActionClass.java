@@ -3,6 +3,7 @@ package mercuryWelcomeActionClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Reporter;
 
 import bp.automation.getPage;
 
@@ -55,6 +56,7 @@ public class registerPageActionClass extends getPage{
 		IsElementDisplayed(token);
 		String text = getText(token);
 		System.out.println(text + " is Displayed on DOM. ");
+		Reporter.log("this is html report");
 		}
 	 
 
