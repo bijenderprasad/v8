@@ -36,6 +36,8 @@ public class registerPageActionClass extends getPage{
 	}
 	
 	public void setupUserLoginData(By token, String value) {
+		Reporter.setEscapeHtml(false);
+		Reporter.log("this is html report");
 		filltext(token, value);
 	}
 	
@@ -56,6 +58,7 @@ public class registerPageActionClass extends getPage{
 		IsElementDisplayed(token);
 		String text = getText(token);
 		System.out.println(text + " is Displayed on DOM. ");
+		Reporter.setEscapeHtml(false);
 		Reporter.log("this is html report");
 		}
 	 
